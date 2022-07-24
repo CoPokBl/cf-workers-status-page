@@ -1,7 +1,7 @@
 settings:
   title: 'Serble Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  url: 'https://status.serble.net' # used for Slack messages
+  logo: serble_logo.png # image in ./public/ folder
   daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
@@ -24,10 +24,10 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: serble-website
+    name: serble.net
+    description: 'The Serble website'
+    url: 'https://serble.net'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
