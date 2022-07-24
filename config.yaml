@@ -15,25 +15,66 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
+
+  - id: serble-website
+    name: 'Serble Website'
+    description: 'The Serble website'
+    url: 'https://serble.net'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: searx
+    name: 'Serble Search'
+    description: 'The Serble searx instance'
+    url: 'https://search.serble.net/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+    
+  - id: files
+    name: 'File Host'
+    description: 'The Serble file hosting platform'
+    url: 'https://files.serble.net/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+    
+  - id: link
+    name: 'Serble Link Shortener'
+    description: 'The Serble link shortener'
+    url: 'https://link.serble.net/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+    
+  - id: homework
+    name: 'Homework Tracker'
+    description: 'The homework tracker API'
+    url: 'https://homeworktrack.serble.net:9897/api'
+    method: GET
+    expectStatus: 200
+    
+  - id: chatapi
+    name: 'Chat API'
+    description: 'The http chat API'
+    url: 'https://chat.serble.net/'
+    method: GET
+    expectStatus: 200
+    
+  - id: media
+    name: 'Media Server'
+    description: 'The Serble Emby instance'
+    url: 'https://media.serble.net/web/index.html'
+    method: GET
+    expectStatus: 200
+    linkable: true
+    
   - id: workers-cloudflare-com # unique identifier
     name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
+    description: "CloudFlare's worker service, this powers multiple Serble services."
     url: 'https://workers.cloudflare.com/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
-
-  - id: serble-website
-    name: serble.net
-    description: 'The Serble website'
-    url: 'https://serble.net'
-    method: GET
-    expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
-
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
-    method: GET
-    expectStatus: 200
