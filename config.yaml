@@ -72,6 +72,14 @@ monitors:
     expectStatus: 200
     linkable: true
     
+  - id: serbleapi
+    name: 'Serble API'
+    description: 'The Serble API'
+    url: 'https://api.serble.net/api/v1/account'
+    method: OPTIONS
+    expectStatus: 200
+    linkable: false
+    
   - id: workers-cloudflare-com # unique identifier
     name: workers.cloudflare.com
     description: "CloudFlare's worker service, this powers multiple Serble services."
