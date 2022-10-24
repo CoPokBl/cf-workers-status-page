@@ -75,10 +75,10 @@ monitors:
   - id: serbleapi
     name: 'Serble API'
     description: 'The Serble API'
-    url: 'https://api.serble.net/api/v1/account'
-    method: OPTIONS
+    url: 'https://api.serble.net/swagger/index.html'
+    method: GET
     expectStatus: 200
-    linkable: false
+    linkable: true
     
   - id: workers-cloudflare-com # unique identifier
     name: workers.cloudflare.com
