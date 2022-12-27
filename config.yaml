@@ -3,7 +3,7 @@ settings:
   url: 'https://status.serble.net' # used for Slack messages
   logo: serble_logo.png # image in ./public/ folder
   daysInHistogram: 30 # number of days you want to display in histogram
-  collectResponseTimes: true # collects avg response times from CRON locations
+  collectResponseTimes: false # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
   notAllmonitorsOperational: 'Not All Systems Operational'
@@ -76,6 +76,14 @@ monitors:
     name: 'Serble API'
     description: 'The Serble API'
     url: 'https://api.serble.net/swagger/index.html'
+    method: GET
+    expectStatus: 200
+    linkable: true
+    
+  - id: serbleai
+    name: 'Serble AI'
+    description: "Serble's AI Service"
+    url: 'https://ai.serble.net'
     method: GET
     expectStatus: 200
     linkable: true
