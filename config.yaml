@@ -87,6 +87,14 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
+
+  - id: swift
+    name: 'SWIFT Backend'
+    description: "The backend for the SWIFT web extension."
+    url: 'https://swiftbackend.serble.net/swagger/index.html'
+    method: GET
+    expectStatus: 200
+    linkable: true
     
   - id: workers-cloudflare-com # unique identifier
     name: workers.cloudflare.com
