@@ -23,14 +23,6 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
-
-  - id: searx
-    name: 'Serble Search'
-    description: 'The Serble searx instance'
-    url: 'https://search.serble.net/'
-    method: GET
-    expectStatus: 200
-    linkable: true
     
   - id: files
     name: 'Serble Files'
@@ -79,14 +71,6 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
-    
-  - id: serbleai
-    name: 'Serble AI'
-    description: "Serble's AI Service"
-    url: 'https://ai.serble.net'
-    method: GET
-    expectStatus: 200
-    linkable: true
 
   - id: swift
     name: 'SWIFT Backend'
@@ -95,7 +79,15 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
-    
+
+  - id: serblegames
+    name: 'Serble Games'
+    description: "The backend for the Serble Games platform."
+    url: 'https://api.games.serble.net/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+  
   - id: workers-cloudflare-com # unique identifier
     name: workers.cloudflare.com
     description: "CloudFlare's worker service, this powers multiple Serble services."
