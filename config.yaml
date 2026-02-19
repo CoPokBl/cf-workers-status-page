@@ -15,7 +15,6 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-
   - id: serble-website
     name: 'Serble Website'
     description: 'The Serble website'
